@@ -14,7 +14,7 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "<<{{ welcome: back }}>>",
+  title: "welcome: back",
   description: ":)",
 };
 
