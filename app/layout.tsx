@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+// import Head from "next/head";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -16,6 +17,13 @@ const geistMono = localFont({
 export const metadata: Metadata = {
   title: "welcome: back",
   description: ":)",
+  icons: [
+    {
+      rel: "icon",
+      href: "/static/favicons/favicon.ico",
+      url: "",
+    },
+  ],
 };
 
 export default function RootLayout({
@@ -25,6 +33,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      {/* <Head>
+        <link rel="icon" href="/static/favicons/favicon.ico" />
+      </Head> */}
+
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
