@@ -2,6 +2,7 @@
 
 import Typewriter from "@components/typewriter";
 import Header from "@components/header";
+import { ThemeToggle } from "@components/theme-toggle";
 
 const Home: React.FC = () => {
   const date = new Date();
@@ -20,10 +21,16 @@ const Home: React.FC = () => {
   ];
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-mono)]">
+    <div className="flex flex-col items-center justify-center min-h-screen pb-20 gap-16 sm:py-20 font-[family-name:var(--font-geist-mono)] dark:text-white bg-white dark:bg-gray-900">
+      <ThemeToggle />
       <main className="flex flex-col items-center justify-center gap-16 w-full">
-        <div className="p-8 w-full flex items-center justify-center">
+        <div className="w-full flex items-center justify-center">
           <Typewriter texts={texts} infinite />
+        </div>
+
+        {/* Rising sun effect */}
+        <div className="relative h-14 overflow-hidden border-b border-gray-300 dark:border-white w-full flex items-center justify-center">
+          <div className="absolute w-28 h-28 rounded-full bg-gray-700 dark:bg-white transition-colors duration-300 top-0" />
         </div>
         <Header />
       </main>
