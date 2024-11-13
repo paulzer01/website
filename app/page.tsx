@@ -21,7 +21,7 @@ const Home: React.FC = () => {
   ];
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen pb-20 gap-16 sm:py-20 font-[family-name:var(--font-geist-mono)] dark:text-white bg-white dark:bg-gray-900">
+    <div className="flex flex-col items-center justify-center min-h-screen pb-20 gap-16 sm:py-20 font-[family-name:var(--font-geist-mono)] dark:text-white text-gray-900 bg-white dark:bg-gray-900">
       <ThemeToggle />
       <main className="flex flex-col items-center justify-center gap-16 w-full">
         <div className="w-full flex items-center justify-center">
