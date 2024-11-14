@@ -25,3 +25,23 @@ body {
     text-wrap: balance;
   }
 }
+
+#cursor {
+  width: 10px;
+  height: 10px;
+  background: var(--background);
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  mix-blend-mode: screen;
+  box-shadow: 0 0 20px var(--background);
+}
+
+.matrix-char {
+  position: absolute;
+  pointer-events: none;
+  font-family: monospace;
+  font-size: 20px;
+  color: var(--background);
+  transition: opacity 1s;
+}
